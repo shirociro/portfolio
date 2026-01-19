@@ -1,0 +1,174 @@
+/* ==========================
+   GLOW EFFECTS
+========================== */
+.glow {
+  box-shadow: 0 0 15px 2px rgba(0, 123, 255, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.glow-danger {
+  box-shadow: 0 0 15px 2px rgb(255, 165, 165);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.bg-delete {
+  background: rgb(255, 165, 165);
+}
+
+/* ==========================
+   SPINNER
+========================== */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.btn-primary {
+  background-color: rgb(62, 70, 76);
+  color: white;
+  border-color: rgb(62, 70, 76);
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: rgb(73, 83, 91);
+  border-color: rgb(73, 83, 91);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: darkgray;
+  border-color: darkgray;
+  transition: all 0.3s ease-in-out;
+}
+.btn-secondary:hover {
+  background-color: rgb(217, 217, 217);
+  color: rgb(0, 0, 0);
+  border-color: darkgray;
+}
+
+button[type="submit"] {
+  width: 100px;
+  transition: all 1s ease-in-out;
+}
+
+/* Focus states */
+button:focus,
+button:active,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0.1rem rgba(165, 165, 165, 0.5) !important;
+  border-color: #c7c7c7 !important;
+}
+
+button:focus:active,
+.btn:focus:active {
+  background-color: rgb(73, 83, 91);
+  border-color: rgb(73, 83, 91);
+}
+
+/* ==========================
+   PAGINATION
+========================== */
+.page-link {
+  color: darkgray;
+}
+.page-link:focus:active,
+.page-link.active,
+.active > .page-link {
+  z-index: 3;
+  color: white;
+  background-color: rgb(73, 83, 91);
+  border-color: rgb(73, 83, 91);
+}
+
+/* ==========================
+   MODAL TRANSITIONS
+========================== */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.1s ease;
+}
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+}
+.fade-slide-enter-to,
+.fade-slide-leave-from {
+  opacity: 1;
+}
+
+/* ==========================
+   LIGHT EDITOR
+========================== */
+.editor.form-control {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+#light-editor-toolbar {
+  border: 2px solid rgb(235, 235, 235);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#light-editor-toolbar .btn {
+  border: 1px solid rgb(235, 235, 235);
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ==========================
+   PRIMEVUE OVERRIDES
+========================== */
+.p-scrollpanel {
+  --p-scrollpanel-bar-background: rgba(0, 0, 0, 0.5);
+}
+.p-badge {
+  --p-badge-font-size: 1rem;
+}
+.p-select {
+  --p-select-option-selected-focus-background: rgba(0, 0, 0, 0.2);
+  --p-select-option-selected-background: rgba(0, 0, 0, 0.2);
+  --p-select-option-selected-color: black;
+}
+
+/* ==========================
+   SMALL TEXT / BADGES
+========================== */
+small {
+  font-size: 0.6rem;
+}
+#priority-badge {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+}
+#status-toggle {
+  position: absolute;
+  bottom: 15px;
+  right: 8px;
+}
+
+/* ==========================
+   HIDDEN / SHOW ANIMATION
+========================== */
+.hidden-item {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  min-height: 0 !important;
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
+}
+.show-item {
+  opacity: 1;
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
+}
