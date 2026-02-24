@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  // base: '/vue3-starter/', // 👈 REQUIRED for GitHub Pages
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

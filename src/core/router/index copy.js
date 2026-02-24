@@ -10,12 +10,11 @@ const router = createRouter({
       component: () => import("@/modules/auth/pages/LoginPage.vue"),
       meta: { layout: "auth" },
     },
-
     {
       path: "/users",
       name: "Users",
       component: () => import("@/modules/users/pages/UsersPage.vue"),
-      meta: { requiresAuth: false, layout: "app" },
+      meta: { requiresAuth: true, layout: "app" },
       children: [
         {
           path: "",
@@ -24,12 +23,11 @@ const router = createRouter({
         },
       ],
     },
-
     {
       path: "/stacks",
       name: "Stacks",
       component: () => import("@/modules/stacks/pages/StacksPage.vue"),
-      meta: { requiresAuth: false, layout: "app" },
+      meta: { requiresAuth: true, layout: "app" },
       children: [
         {
           path: "",
@@ -38,15 +36,12 @@ const router = createRouter({
         },
       ],
     },
-
     {
       path: "/portfolio",
       name: "Portfolio",
       component: () => import("@/modules/portfolio/pages/DashboardPage.vue"),
-      meta: { layout: "default" }, // public page
+      meta: { requiresAuth: false, layout: "default" },
     },
-
-    // 👇 fallback route
     {
       path: "/:pathMatch(.*)*",
       redirect: "/users",
@@ -55,17 +50,17 @@ const router = createRouter({
 });
 
 /**
- * 🔐 Global Auth Guard
+ * Global Auth Guard
  */
 router.beforeEach((to) => {
   const auth = useAuthStore();
 
-  // ❌ Not logged in & trying to access protected route
+  // 🔒 Require authentication
   if (to.meta.requiresAuth && !auth.accessToken) {
-    return { name: "Users" };
+    return { name: "Login" };
   }
 
-  // 🚫 Logged-in users should not go back to login
+  // 🚫 Prevent logged-in users from visiting login page
   if (to.name === "Login" && auth.accessToken) {
     return { name: "Users" };
   }
@@ -78,7 +73,7 @@ window.addEventListener("storage", (event) => {
   if (event.key === "accessToken" && !event.newValue) {
     const auth = useAuthStore();
     auth.logout();
-    router.push({ name: "Portfolio" });
+    router.push({ name: "Login" });
   }
 });
 
