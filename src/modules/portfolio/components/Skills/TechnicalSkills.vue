@@ -30,7 +30,7 @@
                 {{ skill.main }}
               </button>
 
-              <div class="skill-tooltip fw-semibold">
+              <div class="skill-tooltip fw-semibold" >
                 <ul class="mb-0">
                   <li
                     class="fw-semibold"
@@ -316,6 +316,7 @@ const stopAutoHover = (skill) => {
 
 /* Tooltip itself */
 .skill-tooltip {
+  z-index: 99999999999999999999999!important;
   position: absolute;
   left: 50%;
   bottom: 120%;
