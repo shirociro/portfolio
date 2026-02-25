@@ -20,7 +20,7 @@
               @mouseleave="((skill.hover = false), (autoHoverEnabled = true))"
             >
               <button
-                class="skill-btn fw-semibold"
+                class="skill-btn fw-semibold border-0 border-bottom border-white bg-transparent text-white"
                 :style="
                   skill.hover == true
                     ? 'background-color:#2a7378;color:white;'
@@ -45,7 +45,7 @@
           </ul>
         </div>
       </div>
-      <div class="mb-3">
+      <!-- <div class="mb-3">
         <h3 class="card-title mb-1">{{ toolsCard.title }}</h3>
       </div>
       <div class="row">
@@ -55,14 +55,14 @@
           :key="index"
         >
           <div class="skill-group">
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-0 d-flex flex-wrap gap-4">
               <li v-for="tool in group" :key="tool" class="skill-item">
                 {{ tool }}
               </li>
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </b-card>
 </template>
@@ -211,7 +211,7 @@ const toolsCard = ref({
   title: "Tools",
 });
 
-const tools = ref(["GitHub", "Postman", "PgAdmin", "MySQL Workbench"]);
+const tools = ref(["GitHub", "Postman", "PgAdmin", "Docker"]);
 
 const toolsGroups = computed(() => {
   const size = 1;

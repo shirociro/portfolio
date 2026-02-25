@@ -2,7 +2,7 @@
   <section class="dashboard-grid">
     <HeroCard />
     <!-- <SkillsCard class="p-2"/> -->
-    <AboutCard class="dashboard-grid-about" style="height: 520px !important" />
+    <AboutCard class="dashboard-grid-about" style="height: 100vh !important" />
   </section>
 </template>
 
@@ -40,4 +40,14 @@ import AboutCard from "./AboutCard.vue";
 .dashboard-grid-exp {
   background: #fff8e2;
 }
+
+</style>
+<style scoped>
+.dashboard-grid-about {
+  /* Default: Height for mobile/small screens */
+  /* height: 950px !important;  */
+}
+
+/* Bootstrap 'Large' breakpoint (992px and up) */
+
 </style>
