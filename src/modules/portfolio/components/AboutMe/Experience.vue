@@ -29,7 +29,7 @@
 import { ref } from "vue";
 const workExperience = ref({
   title: "Work Experience",
-  company: "MotivIT (US Based Remote)",
+  company: "MotivIT (US Based IT Services and Business Solutions)",
   period: "Feb 2019 – May 2025",
   tasks: [
     "Developed internal and client portals, HR applications, and business transaction systems.",
