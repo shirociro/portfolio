@@ -188,6 +188,8 @@ const skills = ref([
     main: "JavaScript",
     details: ["ES6+", "Async / Await", "Promises", "DOM Manipulation", "Axios"],
   },
+  { main: "TypeScript", details: ["Static Typing", "Interfaces", "Generics"] }, 
+  { main: "UI Component Frameworks", details: ["Bootstrap", "VueBootstrap","Tailwind", "Flowbite", "PrimeVue"] },
   { main: "CSS3", details: ["Responsive Design", "Styling", "Layout"] },
   { main: "Git", details: ["Git Flow", "Git CI/CD"] },
   { main: "React.JS", details: ["Component Architecture", "State Management(Tanstackquery & Redux)", "Hooks", "Composition"] },
