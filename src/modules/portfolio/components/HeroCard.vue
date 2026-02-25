@@ -25,7 +25,7 @@ defineProps({
   description: {
     type: String,
     default:
-      "Expert in Vue3, Express.js, and modern full-stack architecture and other modern javascript frameworks like React.js. Turning complex problems into elegant, scalable solutions.",
+      "Expert in modern JavaScript frontend frameworks like Vue 3 and React.js, backend development with Express.js, and modern full-stack architecture. Skilled at turning complex problems into simplified, scalable solutions.",
   },
 });
 </script>
