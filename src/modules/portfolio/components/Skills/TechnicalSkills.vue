@@ -129,6 +129,15 @@ const skills = ref([
     ],
   },
   {
+    main: ".NET Core (C#)",
+    details: [
+      "Web API Development",
+      "Entity Framework Core",
+      "Dependency Injection",
+      "Middleware & Routing"
+    ]
+  },
+  {
     main: "Go (Fiber)",
     details: [
       "REST API Development",
@@ -158,6 +167,18 @@ const skills = ref([
     hover: false,
   },
   {
+    main: "PostgreSQL",
+    details: [
+      "CTE/WITH",
+      "Joins",
+      "Normalization",
+      "Denormalization",
+      "Procedures",
+      "Functions",
+      "Events"
+      ]  
+  },
+  {
     main: "Scripting/Automation",
     details: ["CronJobs", "Powershell"],
     hover: false,
@@ -168,7 +189,9 @@ const skills = ref([
     details: ["ES6+", "Async / Await", "Promises", "DOM Manipulation", "Axios"],
   },
   { main: "CSS3", details: ["Responsive Design", "Styling", "Layout"] },
-  // { main: "Git", details: ["Git Flow", "Git CI/CD"] },
+  { main: "Git", details: ["Git Flow", "Git CI/CD"] },
+  { main: "React.JS", details: ["Component Architecture", "State Management(Tanstackquery & Redux)", "Hooks", "Composition"] },
+  { main: "Architectural Patterns", details: ["MVC", "MVVM", "Microservices", "Monolith", "Feature-Based"] },
   // { main: "Docker", details: ["Dockerfile"] }
 ]);
 
@@ -186,7 +209,7 @@ const toolsCard = ref({
   title: "Tools",
 });
 
-const tools = ref(["GitHub", "Postman", "Filezilla", "Docker"]);
+const tools = ref(["GitHub", "Postman", "Filezilla", "Docker", "VS Code","pgAdmin", "MySQL Workbench"]);
 
 const toolsGroups = computed(() => {
   const size = 1;
