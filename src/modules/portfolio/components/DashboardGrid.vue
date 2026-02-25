@@ -2,7 +2,7 @@
   <section class="dashboard-grid">
     <HeroCard />
     <!-- <SkillsCard class="p-2"/> -->
-    <AboutCard class="dashboard-grid-about" style="height: 420px !important" />
+    <AboutCard class="dashboard-grid-about" style="height: 520px !important" />
     <!-- <ProjectsCard /> -->
     <!-- <WorkExperienceCard class="dashboard-grid-exp p-5" style="z-index: 99999" /> -->
   </section>

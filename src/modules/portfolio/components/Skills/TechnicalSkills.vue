@@ -209,7 +209,7 @@ const toolsCard = ref({
   title: "Tools",
 });
 
-const tools = ref(["GitHub", "Postman", "Filezilla", "Docker", "VS Code","pgAdmin", "MySQL Workbench"]);
+const tools = ref(["GitHub", "Postman", "PgAdmin", "MySQL Workbench"]);
 
 const toolsGroups = computed(() => {
   const size = 1;
