@@ -7,10 +7,6 @@
 </template>
 
 <script setup>
-/**
- * Main Portfolio Dashboard Entry Point.
- * Standardizes the layout wrapper for the grid components.
- */
 import DashboardGrid from "@/modules/portfolio/components/DashboardGrid.vue";
 </script>
 

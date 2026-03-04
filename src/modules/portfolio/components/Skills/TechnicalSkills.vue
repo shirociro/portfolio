@@ -78,7 +78,7 @@ const skills = ref([
   {
     main: "Vue.js",
     details: [
-      // "Composition API", "Lifecycle Hooks", "Dynamic Components", "Composables", "Pinia", "Tanstack/VueQuery", "Vue Router(Nested & Lazy Routes)", "VueBootstrap","Vuetify", "PrimeVue"]
+      "[5-year working Experience]",
       "Composition API",
       "Lifecycle Hooks",
       "Dynamic Components",
@@ -99,6 +99,7 @@ const skills = ref([
   {
     main: "Node.js (Express)",
     details: [
+      "[2-year working Experience]",
       "EventEmitter",
       "Cluster",
       "Modular/Feature Based Architecture",
@@ -120,6 +121,7 @@ const skills = ref([
   {
     main: "PHP Custom MVC",
     details: [
+      "[2-year working Experience]",
       "OOP / Object-Oriented Programming",
       "Routing & Controllers",
       "Services / Business Logic",
@@ -140,6 +142,7 @@ const skills = ref([
   {
     main: "Go (Fiber)",
     details: [
+      "[2-year working Experience]",
       "REST API Development",
       "Middleware & Routing",
       "Concurrency / Goroutines",
@@ -152,6 +155,7 @@ const skills = ref([
   {
     main: "MySQL",
     details: [
+      "[6-year working Experience]",
       "CTE/WITH",
       "Joins",
       "Normalization",
@@ -312,13 +316,13 @@ const stopAutoHover = (skill) => {
 
 /* Tooltip wrapper */
 .tooltip-wrapper {
+  z-index: 999!important;
   position: relative;
   display: inline-block;
 }
 
 /* Tooltip itself */
 .skill-tooltip {
-  z-index: 99999999999999999999999!important;
   position: absolute;
   left: 50%;
   bottom: 120%;

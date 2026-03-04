@@ -15,7 +15,7 @@
         </ul>
         
         <button @click="showFullDetails = true" class="btn-trigger">
-          See Project Details →
+          See Detailed Contributions →
         </button>
       </b-card-text>
     </b-card>
@@ -78,21 +78,21 @@ const detailedWorkData = ref([
   {
     projectTitle: "Full-Stack Enterprise Applications",
     tech: "Vue 3 • Node.js (Express) • PHP • MySQL 8+",
-    description: "Developed and maintained front-end and back-end components for internal and client-facing web applications, including management portals, pawnshop transaction systems, accounting reports, and HR platforms.",
+    description: "Developed and maintained front-end and back-end components for internal and client-facing web applications, including Management portals, Loan transaction systems, Accounting reports, and HR platforms like attendance/HRMS.",
     highlights: [
-      "Delivered scalable, modular codebases following strict separation-of-concerns principles.",
-      "Implemented RESTful APIs using Node.js (Express) and PHP with JWT authentication.",
+      "Delivered scalable, module based architecture following separation-of-concerns principles.",
+      "Implemented RESTful APIs using Node.js (Express) and PHP with JWT authentication and Websockets",
       "Integrated Vue 3 (Composition API, Pinia, TanStackQuery) with Axios for structured API communication.",
-      "Delivered new production features and system enhancements."
+      "Delivered new update features and system enhancements or revamp from scrath."
     ]
   },
   {
     projectTitle: "Database Engineering & Optimization",
     tech: "MySQL 8+ • JSON Data Types • Stored Procedures • Triggers",
-    description: "Engineered advanced relational and hybrid SQL/JSON database architectures for high-volume financial and transactional systems.",
+    description: "Apply hybrid SQL/JSON database architectures for high-volume financial and transactional systems.",
     highlights: [
       "Optimized complex queries and refactored heavy joins to reduce latency.",
-      "Implemented stored procedures, functions, triggers, and scheduled events.",
+      "Implemented stored procedures, functions, triggers, and scheduled events and rollback & commit transactions for data integrity and performance.",
       "Designed JSON-based dynamic data flows combining structured and semi-structured data.",
       "Automated database-level updates directly within the engine."
     ]
@@ -102,9 +102,10 @@ const detailedWorkData = ref([
     tech: "WebSockets • Pusher.js • JWT • Axios",
     description: "Developed secure communication layers and real-time system synchronization for transaction-critical platforms.",
     highlights: [
-      "Integrated JWT authentication to secure sensitive financial endpoints.",
+      "Integrated JWT authentication to secure systems",
+      "Help integrate Single Sign-On (SSO) solutions, creating one single login for multiple web applications",
       "Implemented live dashboard and transaction updates via WebSockets and Pusher.js.",
-      "Structured API consumption using Axios and TanStackQuery for maintainable data flow."
+      "Structured API consumption using Axios and TanStackQuery state management for maintainable and cleaner front-end codebases."
     ]
   },
   {
@@ -114,8 +115,10 @@ const detailedWorkData = ref([
     highlights: [
       "Deployed applications to Linux and Microsoft server environments.",
       "Automated recurring tasks using cron jobs, Windows Task Scheduler, and PowerShell scripts.",
-      "Performed manual testing prior to QA handover to ensure UI stability and responsiveness.",
-      "Debugged and maintained legacy front-end and back-end codebases."
+      "Performed manual testing prior to QA handover.",
+      "Debugged and maintained legacy front-end and back-end codebases.",
+      "Optimized system performance and reliability through regular maintenance and refactoring.",
+      "Created CI/CD pipelines for frontend deployment using Github Actions"
     ]
   },
   {

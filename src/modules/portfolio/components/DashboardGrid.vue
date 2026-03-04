@@ -1,8 +1,7 @@
 <template>
-  <section class="dashboard-grid">
-    <HeroCard />
-    <!-- <SkillsCard class="p-2"/> -->
-    <AboutCard class="dashboard-grid-about" style="height: 100vh !important" />
+  <section class="dashboard-grid" >
+    <HeroCard  />
+    <AboutCard class="dashboard-grid-about" />
   </section>
 </template>
 

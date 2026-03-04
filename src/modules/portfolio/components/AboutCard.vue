@@ -13,7 +13,6 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
 import Experience from "./AboutMe/Experience.vue";
 import Profile from "./AboutMe/Profile.vue";
 import TechnicalSkills from "./Skills/TechnicalSkills.vue";
