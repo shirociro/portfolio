@@ -96,6 +96,9 @@ const skills = ref([
     ],
     hover: false,
   },
+  { main: "React.JS", details: ["Component Architecture", "State Management(Tanstackquery & Redux)", "Hooks", "Composition"] },
+  { main: "UI Component Frameworks", details: ["Bootstrap", "VueBootstrap","Tailwind", "Flowbite", "PrimeVue"] },
+
   {
     main: "Node.js (Express)",
     details: [
@@ -193,12 +196,9 @@ const skills = ref([
     details: ["ES6+", "Async / Await", "Promises", "DOM Manipulation", "Axios"],
   },
   { main: "TypeScript", details: ["Static Typing", "Interfaces", "Generics"] }, 
-  { main: "UI Component Frameworks", details: ["Bootstrap", "VueBootstrap","Tailwind", "Flowbite", "PrimeVue"] },
   { main: "CSS3", details: ["Responsive Design", "Styling", "Layout"] },
   { main: "Git", details: ["Git Flow", "Git CI/CD"] },
-  { main: "React.JS", details: ["Component Architecture", "State Management(Tanstackquery & Redux)", "Hooks", "Composition"] },
   { main: "Architectural Patterns", details: ["MVC", "MVVM", "Microservices", "Monolith", "Feature-Based"] },
-  // { main: "Docker", details: ["Dockerfile"] }
 ]);
 
 const skillGroups = computed(() => {
