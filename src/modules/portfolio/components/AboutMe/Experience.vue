@@ -56,9 +56,10 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref,watch,onUnmounted } from "vue";
 
 const showFullDetails = ref(false);
+
 
 const workExperience = ref({
   title: "Work Experience",
@@ -80,10 +81,21 @@ const detailedWorkData = ref([
     tech: "Vue 3 • Node.js (Express) • PHP • MySQL 8+",
     description: "Developed and maintained front-end and back-end components for internal and client-facing web applications, including Management portals, Loan transaction systems, Accounting reports, and HR platforms like attendance/HRMS.",
     highlights: [
-      "Delivered scalable, module based architecture following separation-of-concerns principles.",
-      "Implemented RESTful APIs using Node.js (Express) and PHP with JWT authentication and Websockets",
-      "Integrated Vue 3 (Composition API, Pinia, TanStackQuery) with Axios for structured API communication.",
-      "Delivered new update features and system enhancements or revamp from scrath."
+      "Principles: Delivered scalable, modular architecture following separation-of-concerns principles for maintainability and cleaner codebases.",
+      "Backend: Implemented RESTful APIs using Node.js (Express) and PHP with JWT authentication and WebSockets.",
+      "Frontend: Integrated Vue 3 (Composition API, Pinia, TanStack Query) with Axios, leveraging Optimistic UI updates for faster user experience.",
+      "Full Stack: Delivered new features and system enhancements, including complete revamps from scratch."
+    ]
+  },
+  {
+    projectTitle: "Real-Time Functionality & Secure Communication",
+    tech: "WebSockets • Pusher.js • JWT • Axios",
+    description: "Developed secure communication layers and real-time system synchronization for transaction-critical platforms.",
+    highlights: [
+      "Integrated JWT authentication to secure systems",
+      "Help integrate Single Sign-On (SSO) solutions, creating one single login for multiple web applications",
+      "Implemented live dashboard and transaction updates via WebSockets and Pusher.js.",
+      "Structured API consumption using Axios and TanStackQuery state management for maintainable and cleaner front-end codebases."
     ]
   },
   {
@@ -95,17 +107,6 @@ const detailedWorkData = ref([
       "Implemented stored procedures, functions, triggers, and scheduled events and rollback & commit transactions for data integrity and performance.",
       "Designed JSON-based dynamic data flows combining structured and semi-structured data.",
       "Automated database-level updates directly within the engine."
-    ]
-  },
-  {
-    projectTitle: "Real-Time Systems & Secure Communication",
-    tech: "WebSockets • Pusher.js • JWT • Axios",
-    description: "Developed secure communication layers and real-time system synchronization for transaction-critical platforms.",
-    highlights: [
-      "Integrated JWT authentication to secure systems",
-      "Help integrate Single Sign-On (SSO) solutions, creating one single login for multiple web applications",
-      "Implemented live dashboard and transaction updates via WebSockets and Pusher.js.",
-      "Structured API consumption using Axios and TanStackQuery state management for maintainable and cleaner front-end codebases."
     ]
   },
   {
@@ -122,7 +123,7 @@ const detailedWorkData = ref([
     ]
   },
   {
-    projectTitle: "Cross-Functional Collaboration & Client Support",
+    projectTitle: "Team Collaboration & Client Support",
     tech: "Client Communication • UI/UX Collaboration • Business Systems",
     description: "Worked closely with stakeholders and internal teams to deliver business-aligned technical solutions.",
     highlights: [
@@ -292,4 +293,22 @@ const detailedWorkData = ref([
   opacity: 0;
   transform: scale(0.98) translateY(10px);
 }
+.details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;          /* force full screen height */
+  
+  z-index: 9999!important;
+
+  overflow-y: auto;       /* enable vertical scroll */
+  overflow-x: hidden;
+
+  padding-right: 6px;     /* prevents layout shift from scrollbar */
+}
+.details-overlay .container {
+  min-height: 100%;
+}
+
 </style>
