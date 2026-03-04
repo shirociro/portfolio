@@ -36,6 +36,13 @@ import AboutCard from "./AboutCard.vue";
     height: auto !important;
   }
 }
+@media (min-width: 576px) and (max-width: 991px) {
+  .dashboard-grid {
+    height: auto;
+    gap: 0rem;
+  }
+}
+
 .dashboard-grid-exp {
   background: #fff8e2;
 }

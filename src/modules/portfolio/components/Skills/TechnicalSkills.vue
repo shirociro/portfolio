@@ -27,7 +27,12 @@
               </button>
               <div class="skill-tooltip fw-semibold">
                 <ul class="mb-0">
-                  <li v-for="detail in skill.details" :key="detail" class="fw-semibold">
+                  <li
+                    v-for="(detail, index) in skill.details"
+                    :key="detail"
+                     :class="{ 'fw-bold': index === 0 && ['Vue.JS','Node.js (Express)','PHP Custom MVC','Go (Fiber)','MySQL'].includes(skill.main) }"
+
+                  >
                     {{ detail }}
                   </li>
                 </ul>
