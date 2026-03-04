@@ -13,7 +13,6 @@
             <span class="bullet">•</span> {{ task }}
           </li>
         </ul>
-        
         <button @click="showFullDetails = true" class="btn-trigger">
           See Detailed Contributions →
         </button>
@@ -25,23 +24,17 @@
         <div class="container py-5">
           <header class="overlay-header">
             <h1 class="title-primary">Detailed Contributions</h1>
-           <button @click="showFullDetails = false" class="btn-close-modern">
-            <span class="icon">✕</span>
-            <span class="text">CLOSE</span>
-          </button>
+            <button @click="showFullDetails = false" class="btn-close-modern">
+              <span class="icon">✕</span>
+              <span class="text">CLOSE</span>
+            </button>
           </header>
 
           <div class="row g-4">
-            <div 
-              class="col-md-6" 
-              v-for="(item, index) in detailedWorkData" 
-              :key="index"
-            >
+            <div class="col-md-6" v-for="(item, index) in detailedWorkData" :key="index">
               <article class="detail-item-card">
                 <h4 class="title-secondary">{{ item.projectTitle }}</h4>
-                <div class="tech-badge">
-                  <strong>Stack:</strong> {{ item.tech }}
-                </div>
+                <div class="tech-badge"><strong>Stack:</strong> {{ item.tech }}</div>
                 <p class="description">{{ item.description }}</p>
                 <ul class="sub-tasks">
                   <li v-for="sub in item.highlights" :key="sub">{{ sub }}</li>
@@ -56,10 +49,9 @@
 </template>
 
 <script setup>
-import { ref,watch,onUnmounted } from "vue";
+import { ref } from "vue";
 
 const showFullDetails = ref(false);
-
 
 const workExperience = ref({
   title: "Work Experience",
@@ -136,7 +128,6 @@ const detailedWorkData = ref([
 </script>
 
 <style scoped>
-/* Branding Variables */
 .work-experience-container {
   --color-teal: rgb(0, 83, 83);
   --color-gold: rgb(130, 104, 2);
@@ -144,7 +135,6 @@ const detailedWorkData = ref([
   --transition-speed: 0.3s;
 }
 
-/* Card Styling */
 .card-experience {
   position: relative;
   z-index: 1;
@@ -158,15 +148,9 @@ const detailedWorkData = ref([
 .title-primary { color: var(--color-teal); font-weight: 700; }
 .title-secondary { color: var(--color-gold); font-weight: 600; }
 
-.task-list li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
+.task-list li { margin-bottom: 0.5rem; font-size: 0.95rem; line-height: 1.5; }
 .bullet { color: var(--color-gold); margin-right: 8px; }
 
-/* Buttons */
 .btn-trigger {
   background: transparent;
   border: none;
@@ -176,99 +160,20 @@ const detailedWorkData = ref([
   border-bottom: 2px solid transparent;
   transition: var(--transition-speed);
 }
+.btn-trigger:hover { border-bottom-color: var(--color-gold); letter-spacing: 0.5px; }
 
-.btn-trigger:hover {
-  border-bottom-color: var(--color-gold);
-  letter-spacing: 0.5px;
-}
-
-/* Overlay Styling */
 .details-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  top: 0; left: 0;
+  width: 100%;
   height: 100vh;
   background: var(--color-bg-light);
-  z-index: 2000;
+  z-index: 9999!important;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
 }
 
-.overlay-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-
-.detail-item-card {
-  background: #fff;
-  padding: 2rem;
-  border-left: 4px solid var(--color-teal);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-  height: 100%;
-  transition: transform var(--transition-speed);
-}
-
-.detail-item-card:hover {
-  transform: translateY(-5px);
-}
-
-.tech-badge {
-  font-size: 0.85rem;
-  color: #555;
-  background: #f0f0f0;
-  padding: 4px 10px;
-  display: inline-block;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-}
-
-.sub-tasks {
-  font-size: 0.9rem;
-  color: #444;
-  padding-left: 1.2rem;
-  margin-top: 1rem;
-}
-
-.btn-close-modern {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--color-teal);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px; /* Capsule shape */
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px rgba(0, 83, 83, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.btn-close-modern .icon {
-  font-size: 1.1rem;
-  transition: transform var(--transition-speed);
-}
-
-.btn-close-modern:hover {
-  background: #004242; /* Slightly darker teal */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 83, 83, 0.3);
-}
-
-.btn-close-modern:hover .icon {
-  transform: rotate(90deg); /* Playful rotation */
-}
-
-.btn-close-modern:active {
-  transform: translateY(0);
-}
-
-/* Optional: Make the header sticky so the close button is always there */
 .overlay-header {
   position: sticky;
   top: 0;
@@ -282,33 +187,54 @@ const detailedWorkData = ref([
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* Transitions */
+.detail-item-card {
+  background: #fff;
+  padding: 2rem;
+  border-left: 4px solid var(--color-teal);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  height: 100%;
+  transition: transform var(--transition-speed);
+}
+.detail-item-card:hover { transform: translateY(-5px); }
+
+.tech-badge {
+  font-size: 0.85rem;
+  color: #555;
+  background: #f0f0f0;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.sub-tasks { font-size: 0.9rem; color: #444; padding-left: 1.2rem; margin-top: 1rem; }
+
+.btn-close-modern {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-teal);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 83, 83, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-close-modern .icon { font-size: 1.1rem; transition: transform var(--transition-speed); }
+.btn-close-modern:hover { background: #004242; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 83, 83, 0.3); }
+.btn-close-modern:hover .icon { transform: rotate(90deg); }
+.btn-close-modern:active { transform: translateY(0); }
+
 .overlay-fade-enter-active, 
-.overlay-fade-leave-active {
-  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+.overlay-fade-leave-active { transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.4,0,0.2,1); }
 .overlay-fade-enter-from, 
-.overlay-fade-leave-to {
-  opacity: 0;
-  transform: scale(0.98) translateY(10px);
-}
-.details-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;          /* force full screen height */
-  
-  z-index: 9999!important;
+.overlay-fade-leave-to { opacity: 0; transform: scale(0.98) translateY(10px); }
 
-  overflow-y: auto;       /* enable vertical scroll */
-  overflow-x: hidden;
-
-  padding-right: 6px;     /* prevents layout shift from scrollbar */
-}
-.details-overlay .container {
-  min-height: 100%;
-}
-
+.details-overlay .container { min-height: 100%; }
 </style>

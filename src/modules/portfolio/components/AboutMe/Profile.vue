@@ -3,7 +3,6 @@
     <header class="about-header">
       <h2 class="about-title">{{ aboutMe.title }}</h2>
     </header>
-    
     <b-card-text class="about-description">
       {{ aboutMe.description }}
     </b-card-text>
@@ -11,10 +10,6 @@
 </template>
 
 <script setup>
-/**
- * About Me Component
- * Displays high-level professional summary with 6+ years experience.
- */
 import { ref } from "vue";
 
 const aboutMe = ref({
@@ -26,13 +21,10 @@ const aboutMe = ref({
 
 <style scoped>
 .card-about-me {
-  /* Layout settings */
   position: relative;
   z-index: 1;
   top: -100px;
-  
-  /* Visual styling */
-  background: rgba(0, 83, 83, 0.9); /* Matching your teal theme */
+  background: rgba(0, 83, 83, 0.9);
   border: none;
   border-radius: 0;
   padding: 1.5rem;
@@ -56,17 +48,15 @@ const aboutMe = ref({
   margin-bottom: 0;
 }
 
-/* Decorative accent to match the work experience gold */
 .accent-line {
   position: absolute;
   left: 0;
   top: 20%;
   height: 60%;
   width: 4px;
-  background-color: rgb(130, 104, 2); /* Your signature gold */
+  background-color: rgb(130, 104, 2);
 }
 
-/* Ensure fade-in animations work if global classes are present */
 .fade-in {
   animation: fadeIn 0.8s ease-in forwards;
 }
